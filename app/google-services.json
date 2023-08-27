@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1042151133293",
+    "project_id": "proteus-be2b5",
+    "storage_bucket": "proteus-be2b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042151133293:android:de4389146a0f5a2292ef64",
+        "android_client_info": {
+          "package_name": "com.example.proteus1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042151133293-dv418lbnevhhbunp9cr635o8q928r44e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBigWpLBO6hcJJeK6EV_HHLvZcihYeNg6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042151133293-dv418lbnevhhbunp9cr635o8q928r44e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

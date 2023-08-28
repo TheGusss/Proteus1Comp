@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+    android:theme="@style/AppTheme"
     tools:context=".HomeActivity">
 
     <LinearLayout
@@ -43,7 +44,7 @@
         <EditText
             android:id="@+id/UserTxtv"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:hint="Nombre de Usuario"
             android:textSize="20sp" />
 
@@ -54,7 +55,7 @@
         <EditText
             android:id="@+id/telTxtv"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:hint="Telefono"
             android:textSize="20sp" />
 
@@ -62,20 +63,14 @@
             android:layout_width="match_parent"
             android:layout_height="8dp" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/saveButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/saveButton"
-                android:layout_width="194dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Guardar registro"
-                android:textSize="20sp" />
-
-        </LinearLayout>
+            android:layout_weight="1"
+            android:text="Guardar registro"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
         <Space
             android:layout_width="wrap_content"
@@ -88,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Recuperar registro"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <Space
@@ -101,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Eliminar registro"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <Space
@@ -115,6 +112,7 @@
             android:layout_weight="1"
             android:background="@drawable/botones_simples"
             android:text="Cerrar Sesion"
+            android:textColor="#F6F6F6"
             android:textSize="20sp" />
 
         <Space

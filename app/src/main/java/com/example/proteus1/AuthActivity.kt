@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -62,6 +63,7 @@ class AuthActivity : AppCompatActivity() {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(editEmail.text.toString(),
                     editPass.text.toString()).addOnCompleteListener(){
                     if(it.isSuccessful){
+                        limpiaraut()
                         showhome(it.result?.user?.email ?:"", ProviderType.BASIC)
                     } else{
                         showAlert()
@@ -91,6 +93,13 @@ class AuthActivity : AppCompatActivity() {
         putExtra("provider", provider.name)
     }
         startActivity(homeIntent)
+    }
+
+    private fun limpiaraut() {
+        val Useremail=findViewById<TextView>(R.id.editTextTextEmail)
+        val Uderpass=findViewById<TextView>(R.id.editTextTextPassword)
+        Useremail.text = ""
+        Uderpass.text=""
     }
 
 }

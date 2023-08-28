@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -51,6 +52,7 @@ class HomeActivity : AppCompatActivity() {
           hashMapOf("proveedor" to provider, "nombre" to Usertxtv.text.toString(),"telefono" to teltxtv.text.toString())
       )
             guardar()
+            limpiar()
 
         }
         RecButton.setOnClickListener(){
@@ -62,6 +64,8 @@ class HomeActivity : AppCompatActivity() {
         DelButton.setOnClickListener(){
            db.collection("usuarios").document(email).delete()
             eliminar()
+            limpiar()
+
         }
 
 
@@ -86,4 +90,11 @@ class HomeActivity : AppCompatActivity() {
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
+   private fun limpiar() {
+        val Usertxtv=findViewById<TextView>(R.id.UserTxtv)
+        val teltxtv=findViewById<TextView>(R.id.telTxtv)
+        Usertxtv.text = ""
+        teltxtv.text=""
+    }
+
 }

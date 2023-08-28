@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -49,6 +50,8 @@ class HomeActivity : AppCompatActivity() {
       db.collection("usuarios").document(email).set(
           hashMapOf("proveedor" to provider, "nombre" to Usertxtv.text.toString(),"telefono" to teltxtv.text.toString())
       )
+            guardar()
+
         }
         RecButton.setOnClickListener(){
                db.collection("usuarios").document(email).get().addOnSuccessListener {
@@ -58,6 +61,29 @@ class HomeActivity : AppCompatActivity() {
         }
         DelButton.setOnClickListener(){
            db.collection("usuarios").document(email).delete()
+            eliminar()
         }
+
+
+    }
+
+    private fun guardar(){
+
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Guardado")
+        builder.setMessage("Se han guardado correctamente los datos")
+        builder.setPositiveButton("Aceptar",null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun eliminar(){
+
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Eliminado")
+        builder.setMessage("Se han eliminado correctamente los datos")
+        builder.setPositiveButton("Aceptar",null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 }

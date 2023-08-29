@@ -57,6 +57,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Telefono"
+            android:inputType="phone"
+            android:phoneNumber="true"
+            android:maxLength="10"
             android:textSize="20sp" />
 
         <Space

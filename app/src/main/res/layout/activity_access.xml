@@ -4,13 +4,10 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".accessActivity">
+    tools:context=".accessActivity"
+    android:background="#FAF9F9"
+    android:theme="@style/AppTheme">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FAF9F9"
-        tools:context=".accessActivity">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -98,22 +95,21 @@
             app:layout_constraintVertical_bias="0.547"
             app:srcCompat="@mipmap/emailicon" />
 
-        <Button
-            android:id="@+id/accederbtn"
-            android:layout_width="203dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/botones_simples"
-            android:text="Acceder"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.413"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.827" />
+    <Button
+        android:id="@+id/accederbtn"
+        android:layout_width="135dp"
+        android:layout_height="49dp"
+        android:layout_weight="1"
+        android:background="@drawable/botones_simples"
+        android:text="ACCEDER"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

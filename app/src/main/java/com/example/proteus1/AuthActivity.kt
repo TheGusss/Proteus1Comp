@@ -31,8 +31,11 @@ class AuthActivity : AppCompatActivity() {
 
 
         //Setup
-        setup()
+        setup()//Llama a la función setup
     }
+
+    //Función que se encarga de configurar la lógica
+    // se incluye la inicialización de los botones y la lógica para el registro de usuarios.
     private fun setup(){
 
         val signupButton = findViewById<Button>(R.id.saveButton)

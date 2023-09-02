@@ -2,6 +2,7 @@ package com.example.proteus1
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -15,7 +16,7 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        Thread.sleep(1000) //Retardo de splash
+        Thread.sleep(1000) //Retardo de splash(No recomendado)
         setTheme(R.style.AppTheme)//Se utiliza splash al momento de cargar la app y Apptheme cuando carga
 
         super.onCreate(savedInstanceState)
@@ -35,9 +36,8 @@ class AuthActivity : AppCompatActivity() {
     private fun setup(){
 
         val signupButton = findViewById<Button>(R.id.saveButton)
-        val logingButton = findViewById<Button>(R.id.logingbutton)
-        val editEmail=findViewById<EditText>(R.id.editTextTextEmail)
-        val editPass=findViewById<EditText>(R.id.editTextTextPassword)
+        val editEmail=findViewById<EditText>(R.id.editTextTextEmail2)
+        val editPass=findViewById<EditText>(R.id.editTextTextPassword2)
 
         title="Autenticacion"
         signupButton.setOnClickListener {
@@ -46,6 +46,7 @@ class AuthActivity : AppCompatActivity() {
 
                 FirebaseAuth.getInstance().createUserWithEmailAndPassword(editEmail.text.toString(), editPass.text.toString()).addOnCompleteListener(){
                     if(it.isSuccessful){
+                           limpiaraut()
                            showhome(it.result?.user?.email ?:"", ProviderType.BASIC)
                     } else{
                             showAlert()
@@ -56,23 +57,6 @@ class AuthActivity : AppCompatActivity() {
             }
         }
 
-        logingButton.setOnClickListener {
-
-            if (editEmail.text.isNotEmpty()  && editPass.text.isNotEmpty()){
-
-                FirebaseAuth.getInstance().signInWithEmailAndPassword(editEmail.text.toString(),
-                    editPass.text.toString()).addOnCompleteListener(){
-                    if(it.isSuccessful){
-                        limpiaraut()
-                        showhome(it.result?.user?.email ?:"", ProviderType.BASIC)
-                    } else{
-                        showAlert()
-                    }
-                }
-
-
-            }
-        }
 
     }
     //funcion error
@@ -96,10 +80,15 @@ class AuthActivity : AppCompatActivity() {
     }
 
     private fun limpiaraut() {
-        val Useremail=findViewById<TextView>(R.id.editTextTextEmail)
-        val Uderpass=findViewById<TextView>(R.id.editTextTextPassword)
-        Useremail.text = ""
-        Uderpass.text=""
+        val Useremail = findViewById<EditText>(R.id.editTextTextEmail2)
+        val Uderpass = findViewById<EditText>(R.id.editTextTextPassword2)
+        Useremail.setText("")
+        Uderpass.setText("")
     }
 
+    fun irANuevaVista(view: View) {
+        val intent = Intent(this, accessActivity::class.java)
+        startActivity(intent)
+    }
 }
+

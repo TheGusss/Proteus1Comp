@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editTextTextEmail"
+            android:id="@+id/editTextTextEmail2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -31,7 +31,7 @@
             android:layout_height="8dp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/editTextTextPassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -47,35 +47,18 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/saveButton"
-                android:layout_width="194dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/botones_simples"
-                android:text="Registrar"
-                android:textColor="#FFFFFF" />
-
             <Space
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/logingbutton"
-                android:layout_width="203dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/botones_simples"
-                android:text="Acceder"
-                android:textColor="#FFFFFF" />
         </LinearLayout>
 
 
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView4"
         android:layout_width="384dp"
         android:layout_height="306dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -109,6 +92,50 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.547"
         app:srcCompat="@mipmap/emailicon" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ya tienes una cuenta? "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="irANuevaVista"
+        android:text="Iniciar Sesion"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/botones_simples"
+        android:text="Registrar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.827" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,7 +42,7 @@ class AuthActivity : AppCompatActivity() {
         val editEmail=findViewById<EditText>(R.id.editTextTextEmail2)
         val editPass=findViewById<EditText>(R.id.editTextTextPassword2)
 
-        title="Autenticacion"
+
         signupButton.setOnClickListener {
 
             if (editEmail.text.isNotEmpty()  && editPass.text.isNotEmpty()){

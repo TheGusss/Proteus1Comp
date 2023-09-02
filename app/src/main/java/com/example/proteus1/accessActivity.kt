@@ -29,7 +29,7 @@ class accessActivity : AppCompatActivity() {
     }
 
     private fun setup() {
-        title = "Autenticacion"
+
 
         logingButton.setOnClickListener {
             if (editEmail1.text.isNotEmpty() && editPass1.text.isNotEmpty()) {

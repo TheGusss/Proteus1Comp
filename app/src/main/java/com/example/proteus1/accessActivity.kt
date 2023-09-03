@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class accessActivity : AppCompatActivity() {
-
+    //Permite declarar sin asignarle un valor inicial
     lateinit var logingButton: Button
     lateinit var editEmail1: EditText
     lateinit var editPass1: EditText
@@ -24,7 +24,7 @@ class accessActivity : AppCompatActivity() {
         editEmail1 = findViewById(R.id.editTextTextEmail)
         editPass1 = findViewById(R.id.editTextTextPassword)
 
-        // Configura los clics de los botones
+
         setup()
     }
 

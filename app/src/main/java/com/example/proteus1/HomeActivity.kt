@@ -14,6 +14,7 @@ enum class ProviderType{
 }
 
 class HomeActivity : AppCompatActivity() {
+    //Referencia como constante privada a la base de datos
     private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +38,7 @@ class HomeActivity : AppCompatActivity() {
         val RecButton=findViewById<Button>(R.id.recButton)
         val DelButton=findViewById<Button>(R.id.DelButton)
 
-        title="Inicio"
+
 
         Emailtxtv.text=email
         Protxtv.text=provider

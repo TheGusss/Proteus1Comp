@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#F2FFF4"
     android:theme="@style/AppTheme"
     tools:context=".HomeActivity">
 
@@ -58,8 +58,8 @@
             android:layout_height="wrap_content"
             android:hint="Telefono"
             android:inputType="phone"
-            android:phoneNumber="true"
             android:maxLength="10"
+            android:phoneNumber="true"
             android:textSize="20sp" />
 
         <Space

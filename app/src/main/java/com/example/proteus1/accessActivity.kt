@@ -16,6 +16,7 @@ class accessActivity : AppCompatActivity() {
     lateinit var editPass1: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.AppTheme)//Establece el tema
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_access)
 

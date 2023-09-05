@@ -18,6 +18,7 @@ class HomeActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.AppTheme)//Establece el tema
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 

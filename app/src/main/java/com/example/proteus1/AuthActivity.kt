@@ -16,8 +16,9 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        Thread.sleep(1000) //Retardo de splash(No recomendado)
-        setTheme(R.style.AppTheme)//Se utiliza splash al momento de cargar la app y Apptheme cuando carga
+        Thread.sleep(500) //Retardo de splash(No recomendado)
+        setTheme(R.style.AppTheme)//Se utiliza splash al momento de cargar la app
+        // y Apptheme se aplica cuando carga
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)

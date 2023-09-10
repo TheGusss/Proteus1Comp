@@ -49,14 +49,22 @@ class HomeActivity : AppCompatActivity() {
             onBackPressed()
         }
 
+
         saveButton.setOnClickListener(){
+            if (Usertxtv.text.isNotEmpty()  && teltxtv.text.isNotEmpty()){
       db.collection("usuarios").document(email).set(
           hashMapOf("proveedor" to provider, "nombre" to Usertxtv.text.toString(),"telefono" to teltxtv.text.toString())
       )
             guardar()
             limpiar()
 
+        }  else {
+
+            showAlert()
         }
+        }
+
+
         RecButton.setOnClickListener(){
                db.collection("usuarios").document(email).get().addOnSuccessListener {
                    Usertxtv.setText(it.get("nombre")as String?)
@@ -99,6 +107,13 @@ class HomeActivity : AppCompatActivity() {
         teltxtv.text=""
     }
 
-    
+    private fun showAlert() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Error")
+        builder.setMessage("No se permiten registros nulos")
+        builder.setPositiveButton("Aceptar", null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
 
 }
